@@ -145,13 +145,13 @@ class AnsibleAT29 < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/0d/2f/734b2dd3795421b0ee44f1c457681a134b1c2a5b975d9a8033260c76a09a/boto3-1.17.27.tar.gz"
-    sha256 "fa41987f9f71368013767306d9522b627946a01b4843938a26fb19cc8adb06c0"
+    url "https://files.pythonhosted.org/packages/f4/ba/150dd700298b386152dc17582f4d62b0ccd1cb0431a6f0bb63c37cb76b8a/boto3-1.17.29.tar.gz"
+    sha256 "31396fcaffdfc0f465b4de76e1ecae53894eb869b000ffa54aa1693a98db3a3c"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/5d/2a/c9d97a542f972b908d9b9e22124fad40aa86855c05fe50992fe3fce9b291/botocore-1.20.27.tar.gz"
-    sha256 "4477803f07649f4d80b17d054820e7a09bb2cb0792d0decc2812108bc3759c4a"
+    url "https://files.pythonhosted.org/packages/d3/9b/98602d3e056a4294e05ff46d21a6fd44c2f4f310e057c711010f6eb5817f/botocore-1.20.29.tar.gz"
+    sha256 "184b7d26b0669fd65ac8193662376d1267d800e005b69412b57cc82c5ffbe935"
   end
 
   resource "cachetools" do
@@ -250,8 +250,8 @@ class AnsibleAT29 < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/f1/1e/f6e75ee1dc18f9c93e55c0bdfb2176060dfcb51746e6634f50959fe58750/google-auth-1.27.1.tar.gz"
-    sha256 "d8958af6968e4ecd599f82357ebcfeb126f826ed0656126ad68416f810f7531e"
+    url "https://files.pythonhosted.org/packages/b5/11/0ab136e0743bb92728c4863e19bbaec2e213095f74c0189f30dc3092366f/google-auth-1.28.0.tar.gz"
+    sha256 "9bd436d19ab047001a1340720d2b629eb96dd503258c524921ec2af3ee88a80e"
   end
 
   resource "ipaddress" do
