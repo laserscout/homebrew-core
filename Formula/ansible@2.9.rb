@@ -51,7 +51,7 @@ class AnsibleAT29 < Formula
   #   junos-eznc (Juniper device support)
   #   jxmlease (Juniper device support)
   #   dnspython (DNS Lookup - dig)
-  #   pysphere (VMware vSphere support)
+  #   pysphere3 (VMware vSphere support)
   #   python-consul (Consul support)
   #   requests-credssp (CredSSP support for windows hosts)
   #   openshift (k8s module support)
