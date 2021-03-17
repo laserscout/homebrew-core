@@ -9,9 +9,9 @@
   "ansible@2.8": false,
   "ansible@2.9": {
     "extra_packages": [
-      "apache-libcloud", "Babel", "backports.ssl-match-hostname", "boto", "boto3", "contextlib2", "deprecation",
-      "dictdiffer", "dnspython", "docker-py", "docutils", "funcsigs", "ipaddress", "junos-eznc", "jxmlease", "kerberos",
-      "monotonic", "ntc-templates", "openshift", "passlib", "pexpect", "pysphere3", "python-consul", "python-keyczar",
+      "apache-libcloud", "Babel", "backports.ssl-match-hostname", "boto3", "contextlib2", "deprecation", "dictdiffer",
+      "dnspython", "docker-py", "docutils", "funcsigs", "ipaddress", "junos-eznc", "jxmlease", "kerberos", "monotonic",
+      "ntc-templates", "openshift", "passlib", "pexpect", "pysphere3", "python-consul", "python-keyczar",
       "python-neutronclient", "pywinrm", "requests-credssp", "shade","subprocess32", "unicodecsv", "zabbix-api"
     ],
     "exclude_packages": ["textfsm"]
