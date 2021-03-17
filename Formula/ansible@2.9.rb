@@ -33,9 +33,16 @@ class AnsibleAT29 < Formula
   uses_from_macos "libffi"
   uses_from_macos "libxslt"
 
-  # The first, long block of resources can be semi-automatically updated via
-  # `brew update-python-resources ansible@2.9 --print-only` it will collect
-  # requirements from:
+  # The first, long block of resources can be semi-automatically updated by two similar ways
+  # Either run `brew update-python-resources ansible@2.9 --print-only` and replace the
+  # resource block manually.
+  # Or comment out the secord brock with the manual resource and run
+  # 'brew update-python-resources ansible@2.9'.
+  #
+  # In both cases, after the automatic resource updates, check for latest versions of the to
+  # be manually updated resource block
+  #
+  # This will collect requirements from:
   #   ansible
   #   docker-py
   #   python-neutronclient (OpenStack)
@@ -56,9 +63,6 @@ class AnsibleAT29 < Formula
   #   openshift (k8s module support)
   #   pexpect (expect module support)
   #   ntc-templates (Parsing semi-structured text)
-  #
-  # The block could? be ordered by `poet_lint $(brew formula ansible)` from
-  # the homebrew-pypi-poet package
 
   # Automatically updated resources
   resource "apache-libcloud" do
