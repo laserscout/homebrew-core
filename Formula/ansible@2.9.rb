@@ -381,11 +381,6 @@ class AnsibleAT29 < Formula
     sha256 "2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0"
   end
 
-  resource "pycrypto" do
-    url "https://files.pythonhosted.org/packages/60/db/645aa9af249f059cc3a368b118de33889219e0362141e75d4eaf6f80f163/pycrypto-2.6.1.tar.gz"
-    sha256 "f2ce1e989b272cfcb677616763e0a2e7ec659effa67a88aa92b3a65528f60a3c"
-  end
-
   resource "PyNaCl" do
     url "https://files.pythonhosted.org/packages/cf/5a/25aeb636baeceab15c8e57e66b8aa930c011ec1c035f284170cacb05025e/PyNaCl-1.4.0.tar.gz"
     sha256 "54e9a2c849c742006516ad56a88f5c74bf2ce92c9f67435187c3c5953b346505"
@@ -587,6 +582,7 @@ class AnsibleAT29 < Formula
     sha256 "f2ce1e989b272cfcb677616763e0a2e7ec659effa67a88aa92b3a65528f60a3c"
 
     # Fix warnings "SyntaxWarning: "is" with a literal. Did you mean "=="?" for python 3.8
+    # Patch can be removed and resource can be set to auto update if v2.7.1 is ever released in pypi
     patch do
       url "https://github.com/dlitz/pycrypto/commit/4e4cc0beefbb316db2a8750e747e697df0b754d7.patch?full_index=1"
       sha256 "f82fedee6cf73c868b55af3ab2b7d2d029b84960be0dc3baf85bb4bf541e1451"
