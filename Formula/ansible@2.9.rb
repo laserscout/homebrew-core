@@ -56,6 +56,7 @@ class AnsibleAT29 < Formula
   #   requests-credssp (CredSSP support for windows hosts)
   #   openshift (k8s module support)
   #   pexpect (expect module support)
+  #   ntc-templates (Parsing semi-structured text)
 
   ### setup_requires dependencies
   resource "pbr" do
