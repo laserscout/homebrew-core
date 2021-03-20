@@ -137,6 +137,11 @@ class Openstackclient < Formula
     sha256 "8ee4d8fe8bc97bc57b2152aaf44b8fda1178e9acb3dbc51a88bc52fb34ab6407"
   end
 
+  resource "os-client-config" do
+    url "https://files.pythonhosted.org/packages/58/be/ba2e4d71dd57653c8fefe8577ade06bf5f87826e835b3c7d5bb513225227/os-client-config-2.1.0.tar.gz"
+    sha256 "abc38a351f8c006d34f7ee5f3f648de5e3ecf6455cc5d76cfd889d291cdf3f4e"
+  end
+
   resource "os-service-types" do
     url "https://files.pythonhosted.org/packages/58/3f/09e93eb484b69d2a0d31361962fb667591a850630c8ce47bb177324910ec/os-service-types-1.7.0.tar.gz"
     sha256 "31800299a82239363995b91f1ebf9106ac7758542a1e4ef6dc737a5932878c6c"
@@ -152,9 +157,19 @@ class Openstackclient < Formula
     sha256 "f50bb71439af4515bce3cf1c2b60d36da70c3cfbf5b1b7e3cd4c4cf868f2c3e9"
   end
 
+  resource "oslo.context" do
+    url "https://files.pythonhosted.org/packages/22/4e/336321171977ea62711f5d896e0d597346ca4f290e0caa2de1b10f748838/oslo.context-3.2.0.tar.gz"
+    sha256 "0e7d96a95c276de2da0f458ef34153347327ac34fe33b264be2bb59eac51e620"
+  end
+
   resource "oslo.i18n" do
     url "https://files.pythonhosted.org/packages/de/6f/e8343be26e69e42b3d30610c3ffee576e5b901be6792e5c3af1384613b40/oslo.i18n-5.0.1.tar.gz"
     sha256 "3484b71e30f75c437523302d1151c291caf4098928269ceec65ce535456e035b"
+  end
+
+  resource "oslo.log" do
+    url "https://files.pythonhosted.org/packages/e0/2b/30e41e5cef9da3aafe8a174fde3bcde5ebdec69644036302b1a75570b910/oslo.log-4.4.0.tar.gz"
+    sha256 "0883be3099cd9f8e17843b574018627e1d64243aabcf6cdbe1ebdd1cb5784448"
   end
 
   resource "oslo.serialization" do
@@ -202,6 +217,11 @@ class Openstackclient < Formula
     sha256 "dec1998badfcf3af0a1bf47bbafd3a4f3415c18e1f9fbeceab77737da99b7c28"
   end
 
+  resource "python-dateutil" do
+    url "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz"
+    sha256 "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
+  end
+
   resource "python-heatclient" do
     url "https://files.pythonhosted.org/packages/21/3e/9b8291832fa40bb39d46e13a8327705460ab3fb25c46c950f0fafec9ceaf/python-heatclient-2.3.0.tar.gz"
     sha256 "d6fe15e610523f96e1ee26e84e9d5fd06846a3fa72d352c38f1fc79abe7eb44a"
@@ -212,9 +232,19 @@ class Openstackclient < Formula
     sha256 "0248426e483b95de395086482c077d48e45990d3b1a3e334b2ec8b2e108f5a8a"
   end
 
+  resource "python-neutronclient" do
+    url "https://files.pythonhosted.org/packages/ad/86/d38f25f73071e2d729cc505aa984b19a4656b581a861f1252b23ce0012d1/python-neutronclient-7.3.0.tar.gz"
+    sha256 "41b9a4bab8ebb2428f926cd1f7077df6c1d997f384e48aa0cbec049b8b54536c"
+  end
+
   resource "python-novaclient" do
     url "https://files.pythonhosted.org/packages/df/2e/5f41b6c012f2295cc6cca8fd5d853d4ad4cccf4dc6211e710cee28763544/python-novaclient-17.4.0.tar.gz"
     sha256 "bca1a3899c0ecf0f63a9b3e97c5d56557186bece1e2a585b26d7c5727d461822"
+  end
+
+  resource "python-octaviaclient" do
+    url "https://files.pythonhosted.org/packages/93/54/6d734af443f2f9d670009387b3a3d8f4fb9d2f9f20e2eb23030b40016806/python-octaviaclient-2.3.0.tar.gz"
+    sha256 "5150cab6aef0b0c479d133f10c4733266d197a568c02a339e6230637a24221f0"
   end
 
   resource "python-swiftclient" do
@@ -286,6 +316,7 @@ class Openstackclient < Formula
     openstack_subcommands = [
       "server list",
       "stack list",
+      "loadbalancer list",
     ]
     openstack_subcommands.each do |subcommand|
       output = shell_output("#{bin}/openstack #{subcommand} 2>&1", 1)
