@@ -87,9 +87,9 @@ class AnsibleLint < Formula
   def install
     virtualenv_install_with_resources
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
-    site_packages = "libexec/lib/python#{xy}/site-packages"
-    ansible = Formula["ansible"].opt_prefix
-    (prefix/site_packages/"homebrew-ansible.pth").write ansible/site_packages
+    site_packages = "lib/python#{xy}/site-packages"
+    ansible = Formula["ansible"].opt_libexec
+    (libexec/site_packages/"homebrew-ansible.pth").write ansible/site_packages
   end
 
   test do

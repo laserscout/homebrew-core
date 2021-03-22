@@ -25,8 +25,8 @@ class Ansible < Formula
   uses_from_macos "libffi"
   uses_from_macos "libxslt"
 
-  # The first, short block of resources can't be automatically updated and should be cared for manually.
-  # The second, long black can be updated by two slightly different methods.
+  # The second (short) block of resources can't be automatically updated and should be cared for manually.
+  # The first (long) block can be updated by two slightly different methods.
   # A) run `brew update-python-resources ansible --print-only` and replace the resource
   # block manually.
   # B) temporarily comment out the "Manually updated resources" block and run `brew update-python-resources ansible`.
